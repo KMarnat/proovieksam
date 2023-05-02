@@ -1,0 +1,226 @@
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* CSS RESET END */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* TYPOGRAPHY */
+@font-face {
+  font-family: 'FreightDispBold';
+  src: url('./../assets/fonts/FreightDispProBold-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'FreightDispLight';
+  src: url('./../assets/fonts/FreightDispProLight-Regular.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+/* font-family: 'Montserrat', sans-serif; */
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: white;
+  font-family: 'FreightDispLight', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+li {
+  font-size: 1.6rem;
+  color: var(--beige-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'FreightDispBold', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.209rem;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+small,
+.text_small {
+  font-size: 0.75rem;
+}
+
+/* TYPOGRAPHY END */
+/* GLOBAL STYLES */
+:root {
+  --green-color: #051a0a;
+  --beige-color: #e2b699;
+  --gray-color: #8f8c8c;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+/* GLOBAL STYLES END */
+/* MAIN STYLES */
+body {
+  background-color: var(--green-color);
+}
+
+header {
+  display: flex;
+  padding: 50px 120px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.515), rgba(0, 0, 0, 0));
+}
+
+.hero {
+  background: url('../assets/wall.jpg');
+  background-size: cover;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--green-color));
+}
+
+.nav-logo {
+  width: 200px;
+}
+
+.hero-nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+.hero-nav li {
+  text-decoration: none;
+}
+
+.hero-msg {
+  z-index: 3;
+  align-self: center;
+  text-align: center;
+}
+
+.scroll-down {
+  z-index: 3;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.scroll-down img {
+  width: 30px;
+}
+
+/* MAIN STYLES END */
