@@ -103,6 +103,9 @@ body {
 
 p {
   margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
 }
 
 li {
@@ -115,7 +118,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 3rem 0 1.38rem;
+  margin: 2rem 0 1.38rem;
   font-family: 'FreightDispBold', sans-serif;
   font-weight: 400;
   line-height: 1.3;
@@ -161,6 +164,17 @@ a {
   list-style: none;
   text-decoration: none;
 }
+
+.wrapper {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3em;
+}
+
+.hidden {
+  display: none;
+}
 /* GLOBAL STYLES END */
 /* MAIN STYLES */
 body {
@@ -201,10 +215,32 @@ header {
 .hero-nav ul {
   display: flex;
   gap: 40px;
+  text-decoration: none;
 }
 
-.hero-nav li {
-  text-decoration: none;
+.hero-nav a {
+  position: relative;
+}
+
+.hero-nav a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    90deg,
+    var(--beige-color),
+    var(--beige-color)
+  ); /* underline color */
+  background-size: 0 2px; /* vertical size of underline */
+  background-repeat: no-repeat;
+  background-position: left bottom; /* start position of underline */
+  transition: background-size 0.2s ease-in; /* duration and timing style of animation */
+}
+
+.hero-nav a:hover::before {
+  background-size: 100% 2px;
 }
 
 .hero-msg {
@@ -216,11 +252,82 @@ header {
 .scroll-down {
   z-index: 3;
   align-self: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px 0 90px;
+  width: 30px;
+  transition: 0.2s ease-in;
 }
 
-.scroll-down img {
-  width: 30px;
+.scroll-down:hover {
+  transform: scale(1.2);
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.introduction h5 {
+  font-family: 'Monsterrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  color: var(--beige-color);
+}
+
+.introduction h5::before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: var(--beige-color);
+  position: absolute;
+  top: 40px;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.duo-para {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin: 40px 0;
+}
+
+.duo-para p {
+  max-width: 530px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 30px;
+}
+
+.play-btn {
+  width: 80px;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  opacity: 100%;
+}
+
+.video {
+  transition: 0.2s ease-in;
+}
+
+.bright-filter {
+  filter: brightness(70%);
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
 }
 
 /* MAIN STYLES END */
