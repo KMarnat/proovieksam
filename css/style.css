@@ -205,7 +205,7 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0), var(--green-color));
 }
 
-.nav-logo {
+.logo {
   width: 200px;
 }
 
@@ -213,6 +213,7 @@ header {
   display: flex;
   gap: 40px;
   text-decoration: none;
+  padding: 0;
 }
 
 .hero-nav a {
@@ -339,7 +340,7 @@ header {
   color: white;
   background: linear-gradient(var(--beige-color), var(--beige-color)) center/2px 120% no-repeat;
   padding: 23px 0;
-  margin: 40px 0;
+  margin: 50px 0;
 }
 
 .reasons-grid div {
@@ -356,7 +357,7 @@ header {
 
 .left-cell {
   text-align: right;
-  padding: 0 15px 15px 0;
+  padding: 0 20px 15px 0;
 }
 
 .left-cell::after {
@@ -371,7 +372,7 @@ header {
 }
 
 .right-cell {
-  padding: 0 0px 15px 15px;
+  padding: 0 0px 15px 20px;
 }
 
 .right-cell::after {
@@ -404,4 +405,116 @@ header {
   justify-content: center;
 }
 
+.btn {
+  border: 1px solid var(--beige-color);
+  width: 160px;
+  height: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: 0.2s ease-in;
+  background: transparent;
+  padding: 0;
+}
+
+.btn a {
+  font-size: 1.6rem;
+  color: var(--beige-color);
+  width: inherit;
+  height: inherit;
+  transition: 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: var(--beige-color);
+}
+
+.btn a:hover {
+  color: var(--green-color);
+}
+
+.wrapper-tours {
+  position: relative;
+  padding: 3em 0;
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(4, 100px);
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+  position: absolute;
+  right: 20%;
+}
+
+.tour-image {
+  background-image: url('../assets/wallTour.jpg');
+  width: 1300px;
+  height: 700px;
+  position: relative;
+}
+
+.tour-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(to left, var(--green-color), rgba(0, 0, 0, 0));
+}
+
+.tours {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.tour-date {
+  text-align: right;
+}
+
+.tour-time {
+  color: var(--gray-color);
+}
+
+.btn-cell {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 80px 0;
+  padding: 20px;
+}
+
+.sponsor-logos img {
+  height: 150px;
+}
+
+.sponsor-logos img:hover {
+  filter: opacity(70%);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--beige-color);
+  align-items: center;
+  padding: 30px 0 !important;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--beige-color);
+}
 /* MAIN STYLES END */

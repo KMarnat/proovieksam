@@ -1,16 +1,4 @@
-/*
-when button is pressed:
-1. button disappears
-2. fitler class toggle off
-3. controls visible
-4. video plays
-
-when paused
-1. button appears
-2. filter class toggle on
-3. controls invisible
-4. video pause
-*/
+'use strict';
 
 const playBtn = document.querySelector('.play-btn');
 const video = document.querySelector('video');
@@ -34,3 +22,23 @@ function pauseVideo() {
 
 video.addEventListener('pause', pauseVideo);
 playBtn.addEventListener('click', playVideo);
+
+///////////////////////////////////////////////////////////
+// Scroll-down button function
+const btnScrollDown = document.querySelector('.scroll-down');
+const firstSection = document.querySelector('.introduction');
+
+function scrollDown(e) {
+  // getBoudingClientRect() function gives info about element size and it's position
+  const secOneCoords = firstSection.getBoundingClientRect();
+
+  window.scrollTo({
+    // Scrolling to first section, even if already scrolled to middle of hero
+    // Top of the 1st section to the top of the viewport + current scroll position
+    left: secOneCoords.left + window.scrollX,
+    top: secOneCoords.top + window.scrollY,
+    behavior: 'smooth',
+  });
+}
+
+btnScrollDown.addEventListener('click', scrollDown);
