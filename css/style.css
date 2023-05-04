@@ -167,6 +167,7 @@ a {
   max-width: 1400px;
   margin: 0 auto;
   padding: 3em;
+  position: relative;
 }
 
 .hidden {
@@ -260,10 +261,10 @@ header {
   transform: scale(1.2);
 }
 
-.introduction {
+.bg-chinese-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
 }
 
 .section-title h5 {
@@ -317,6 +318,7 @@ header {
   cursor: pointer;
   transition: 0.2s ease-in;
   opacity: 100%;
+  z-index: 5;
 }
 
 .video {
@@ -516,5 +518,25 @@ footer p {
   margin: 0;
   font-size: 1.6rem;
   color: var(--beige-color);
+}
+
+.bg-chinese {
+  position: absolute;
+  height: 700px;
+  opacity: 3%;
+  align-self: center;
+  z-index: -1;
+}
+
+.introduction .bg-chinese {
+  top: 35px;
+}
+
+.reasons .bg-chinese:nth-of-type(1) {
+  top: 0;
+}
+
+.reasons .bg-chinese:nth-of-type(2) {
+  bottom: -390px;
 }
 /* MAIN STYLES END */
