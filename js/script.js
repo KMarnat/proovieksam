@@ -20,7 +20,8 @@ function pauseVideo() {
   playBtn.classList.remove('hidden');
 }
 
-video.addEventListener('pause', pauseVideo);
+// video pause event listener pauses the video if skipping video using video controls
+// video.addEventListener('pause', pauseVideo);
 playBtn.addEventListener('click', playVideo);
 
 ///////////////////////////////////////////////////////////

@@ -10,22 +10,25 @@
     <script defer src="/js/script.js"></script>
   </head>
   <body>
-    <section class="hero">
-      <div class="overlay"></div>
-      <header>
-        <a href="#"><img src="./assets/logo.svg" alt="" class="logo" /></a>
-        <nav class="hero-nav">
-          <ul>
-            <a href=""><li>Home</li></a>
-            <a href=""><li>Explore</li></a>
-            <a href=""><li>Articles</li></a>
-            <a href=""><li>Gallery</li></a>
-            <a href=""><li>Contact</li></a>
-          </ul>
-        </nav>
-      </header>
-      <h1 class="hero-msg">Discover the awe-inspiring<br />Great Wall of China</h1>
-      <img src="./assets/scroll-arrows.svg" alt="" class="scroll-down" />
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="overlay"></div>
+        <header>
+          <a href="#" class="logo"><img src="./assets/logo.svg" alt="" /></a>
+          <nav class="hero-nav">
+            <ul>
+              <a href=""><li>Home</li></a>
+              <a href=""><li>Explore</li></a>
+              <a href=""><li>Articles</li></a>
+              <a href=""><li>Gallery</li></a>
+              <a href=""><li>Contact</li></a>
+            </ul>
+          </nav>
+          <a href="" class="burger-menu"><img src="/assets/burger-menu.svg" alt="" /></a>
+        </header>
+        <h1 class="hero-msg">Discover the awe-inspiring<br />Great Wall of China</h1>
+        <img src="./assets/scroll-arrows.svg" alt="" class="scroll-down" />
+      </div>
     </section>
     <section class="wrapper bg-chinese-container introduction">
       <img src="./assets/chinese1.svg" alt="background chinese" class="bg-chinese" />
@@ -177,9 +180,9 @@
       </div>
     </section>
     <footer class="wrapper">
-      <p>All rights reserved ©2023</p>
-      <img src="./assets/logoWhite.svg" alt="GoToChina logo white" class="logo" />
-      <nav class="hero-nav">
+      <p class="copyright">All rights reserved ©2023</p>
+      <a href="#" class="logo"><img src="./assets/logoWhite.svg" alt="GoToChina logo white" /></a>
+      <nav class="hero-nav footer-nav">
         <ul>
           <a href=""><li>Privacy</li></a>
           <a href=""><li>Disclaimer</li></a>
